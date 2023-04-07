@@ -12,7 +12,7 @@ export class RegisterValidators {
       }
 
       const error =
-        control.value === matchingControl ? null : { noMatch: true };
+        control.value === matchingControl.value ? null : { noMatch: true };
 
       matchingControl.setErrors(error);
 
@@ -20,4 +20,3 @@ export class RegisterValidators {
     };
   }
 }
-``

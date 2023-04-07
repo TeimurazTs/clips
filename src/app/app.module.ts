@@ -14,17 +14,26 @@ import { AboutComponent } from './about/about.component';
 import { VideoModule } from './video/video.module';
 import { ClipComponent } from './clip/clip.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomeComponent, AboutComponent, ClipComponent, NotFoundComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    HomeComponent,
+    AboutComponent,
+    ClipComponent,
+    NotFoundComponent,
+  ],
   imports: [
+    VideoModule,
     BrowserModule,
     AppRoutingModule,
     UserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    VideoModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
